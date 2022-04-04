@@ -10,14 +10,14 @@
 // ==/UserScript==
 if (window.top !== window.self) {
     window.addEventListener('load', () => {
-            document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.children[0].appendChild(
+            document.getElementsByTagName("ece")[0].shadowRoot.children[0].getElementsByTagName("ece")[0].shadowRoot.children[0].appendChild(
         (function () {
             if (!Date.now) {
                 Date.now = function() { return new Date().getTime(); }
             }
             const i = document.createElement("img");
             i.src = "https://cdn.discordapp.com/attachments/413985144219893760/960509161995636777/frenchOverlay.png";
-            i.style = "position: absolute;left: 0;top: 0px;image-rendering: pixelated;width: 2000px;height: 2000px;";
+            i.style = "position: absolute;left: 1471;top: 322px;image-rendering: pixelated;width: 2000px;height: 2000px;";
             i.id = "mcss-overlay"
             i.setAttribute("vis",1)
             console.log(i);
@@ -30,7 +30,7 @@ if (window.top !== window.self) {
             i.style = "position: fixed;left: 10px; background: #fff; top: 50%;width: 50px;height: 50px;";
             i.innerHTML = "T"
             i.onclick = function() {
-                const img = document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.querySelector("#mcss-overlay")
+                const img = document.getElementsByTagName("ece")[0].shadowRoot.children[0].getElementsByTagName("ece")[0].shadowRoot.querySelector("#mcss-overlay")
                 if (img.getAttribute("vis") == "1") {
                     img.setAttribute("vis",0)
                     img.style.opacity  = 0
