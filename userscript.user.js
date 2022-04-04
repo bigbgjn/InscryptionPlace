@@ -10,7 +10,7 @@
 // ==/UserScript==
 if (window.top !== window.self) {
     window.addEventListener('load', () => {
-            document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.children[0].appendChild(
+            document.getElementsByTagName("ece.png")[0].shadowRoot.children[0].getElementsByTagName("ece")[0].shadowRoot.children[0].appendChild(
         (function () {
             if (!Date.now) {
                 Date.now = function() { return new Date().getTime(); }
@@ -30,7 +30,7 @@ if (window.top !== window.self) {
             i.style = "position: fixed;left: 10px; background: #fff; top: 50%;width: 50px;height: 50px;";
             i.innerHTML = "T"
             i.onclick = function() {
-                const img = document.getElementsByTagName("mona-lisa-embed")[0].shadowRoot.children[0].getElementsByTagName("mona-lisa-canvas")[0].shadowRoot.querySelector("#mcss-overlay")
+                const img = document.getElementsByTagName("ece.png")[0].shadowRoot.children[0].getElementsByTagName("ece.png")[0].shadowRoot.querySelector("#mcss-overlay")
                 if (img.getAttribute("vis") == "1") {
                     img.setAttribute("vis",0)
                     img.style.opacity  = 0
